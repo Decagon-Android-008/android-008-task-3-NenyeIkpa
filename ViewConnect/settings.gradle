@@ -1,0 +1,2 @@
+rootProject.name = "ViewConnect"
+include ':app'

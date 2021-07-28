@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ViewConnect</string>
+    <string name="daysLeft">30 days left</string>
+    <string name="date">20.10.2020</string>
+    <string name="profile_picture">profile picture</string>
+    <string name="good_morning">Good morning!</string>
+    <string name="search">Search for celebrants...</string>
+    <string name="upcoming_birthdays">Upcoming birthdays</string>
+</resources>
