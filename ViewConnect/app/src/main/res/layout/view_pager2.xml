@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center">
 
-
+<!--define components of viewpager-->
     <androidx.cardview.widget.CardView
         android:layout_width="300dp"
         android:layout_height="300dp"
@@ -42,7 +42,7 @@
                 android:layout_marginStart="80dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/merriweather"
-                android:text="TextView"
+                android:text="@string/textview"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 android:gravity="center"

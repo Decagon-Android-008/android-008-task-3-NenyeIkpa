@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+//create the adapter class that works with the recycler view adapter and view holder class to set the methods for the recycler view
 class ViewPagerAdapter(private val activities: List<Activity>) :
 RecyclerView.Adapter<ViewPagerAdapter.ViewPagerHolder>(){
 

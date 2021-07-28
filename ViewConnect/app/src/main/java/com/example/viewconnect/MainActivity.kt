@@ -2,6 +2,8 @@ package com.example.viewconnect
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Switch
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -14,6 +16,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        //set conditions for switching theme
+        val switch = findViewById<Switch>(R.id.switch1)
+        switch.setOnClickListener{
+            if(switch.isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+
+        }
+
+//        create list for view pager
         val activityList = listOf(
             Activity(R.drawable.kamsi,"It's Kamsi's birthday!"),
             Activity(R.drawable.victor,  "It's Victor's birthday!"),
@@ -22,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             Activity(R.drawable.snowboarding, "It's Tolu's Birthday!")
         )
 
+//        define list for recycler view
         val profileList = listOf(
         Display(R.drawable.image_5,"Chinenye Ikpa"),
         Display(R.drawable.image_2,  "Nkechi Williams"),
@@ -45,6 +61,7 @@ class MainActivity : AppCompatActivity() {
         Display(R.drawable.image_10, "Victor Bamikole")
         )
 
+//        set the the view pager and recycler view adapters to the their respective resource ids
         vpAdapter = ViewPagerAdapter(activityList)
         viewPager.adapter = vpAdapter
 

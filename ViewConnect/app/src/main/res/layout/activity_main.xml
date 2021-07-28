@@ -7,8 +7,11 @@
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9ACFD6">
+    style="@style/background_color">
 
+<!--    define switch for theme change-->
+
+    <!--    define toolbar within which the toolbar compnents are embedded in a constraint layout for maximized positioning-->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -22,6 +25,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <!--    create view pager that holds multiple views which we can swipe through-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -31,15 +36,24 @@
         app:layout_constraintTop_toTopOf="@id/toolbar">
 
 
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/mode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/greetings_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="50dp"
-            android:fontFamily="@font/poppins"
             android:text="@string/good_morning"
-            android:textColor="#393939"
+            android:textAppearance="@style/general_text_style"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -58,8 +72,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:fontFamily="@font/poppins"
                 android:hint="@string/search"
+                android:textAppearance="@style/general_text_style"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
@@ -147,7 +161,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/general_text_style"
         android:text="@string/upcoming_birthdays"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@id/recyclerView"
@@ -176,6 +190,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_input_add" />
 
+<!--    define bottom navigation which holds links to options you always want displayed at the lower end of the screen-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_bar"
         android:layout_width="411dp"
@@ -227,10 +242,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
-                android:fontFamily="@font/poppins"
-                android:text="Home"
-                android:textColor="#8E3B9C"
-                android:textSize="10sp"
+                android:textSize="10dp"
+                android:textAppearance="@style/general_text_style"
+                android:text="@string/home"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/homeIcon" />
 
@@ -238,9 +252,9 @@
                 android:id="@+id/peopleText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins"
-                android:text="People"
-                android:textSize="10sp"
+                android:textSize="10dp"
+                android:textAppearance="@style/general_text_style"
+                android:text="@string/people"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/peopleIcon" />
@@ -250,9 +264,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="30dp"
-                android:fontFamily="@font/poppins"
-                android:text="Gifts"
-                android:textSize="10sp"
+                android:textAppearance="@style/general_text_style"
+                android:textSize="10dp"
+                android:text="@string/gifts"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/giftBox" />
         </androidx.constraintlayout.widget.ConstraintLayout>

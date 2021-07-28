@@ -13,4 +13,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="general_text_style">
+        <item name="android:textColor">@color/font_color_day</item>
+        <item name="fontFamily">@font/poppins</item>
+    </style>
+    <style name="background_color">
+        <item name="backgroundColor">@color/background_color_day</item>
+    </style>
 </resources>
