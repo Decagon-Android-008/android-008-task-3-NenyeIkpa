@@ -11,7 +11,7 @@
 
 <!--    define switch for theme change-->
 
-    <!--    define toolbar within which the toolbar compnents are embedded in a constraint layout for maximized positioning-->
+    <!--    define toolbar within which the toolbar components are embedded in a constraint layout for maximized positioning-->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -77,24 +77,6 @@
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/searchicon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="top|end"
-                    android:layout_marginEnd="17dp"
-                    android:layout_marginBottom="18dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/black"
-                    app:layout_constraintBottom_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:srcCompat="@android:drawable/ic_menu_search" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.textfield.TextInputLayout>
 

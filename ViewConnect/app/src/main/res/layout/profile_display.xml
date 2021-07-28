@@ -57,9 +57,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="26.58dp"
                 android:layout_marginTop="18.72dp"
-                android:textAppearance="@style/general_text_style"
                 android:text="@string/textview"
-                android:textSize="14dp"
+                android:textAppearance="@style/general_text_style"
+                android:textSize="12dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteX="114dp"
@@ -71,9 +71,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50.49dp"
                 android:layout_marginTop="46.17dp"
-                android:textAppearance="@style/general_text_style"
                 android:text="@string/date"
-                android:textSize="14dp"
+                android:textAppearance="@style/general_text_style"
+                android:textSize="12dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteX="16dp" />
@@ -84,12 +84,46 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50.21dp"
                 android:layout_marginTop="70.55dp"
-                android:textAppearance="@style/general_text_style"
                 android:text="@string/daysLeft"
-                android:textSize="14dp"
+                android:textAppearance="@style/general_text_style"
+                android:textSize="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteX="28dp" />
+
+            <ImageView
+                android:id="@+id/daysleftImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginBottom="6dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/daysLeft"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_group__2_" />
+
+            <ImageView
+                android:id="@+id/bdaycakeImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toTopOf="@id/daysleftImage"
+                app:layout_constraintEnd_toStartOf="@+id/date"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/bdaycake"
+                tools:layout_editor_absoluteY="47dp" />
+
+            <ImageView
+                android:id="@+id/verticalBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/status_bar_item_app_background"
+                app:tint="@color/black" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
